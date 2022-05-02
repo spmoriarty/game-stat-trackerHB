@@ -35,9 +35,22 @@ function resetStats() {
 
 form.addEventListener('submit', (e) => {
     // Step 1 - add code to track each submission to the stats
+    const gameData = new FormData(form);
+    let game = {
+        player: gameData.get('player'),
+        points: gameData.get('points'),
+    };
+    renderStats(), 
+    stats.push(game);
+    
+    renderStats();
     // Create an object to "model" you statistic like the following:
+
     // { player: 'Bob', points: 2 }
     // Hint -- create the object from the form, push it onto the stats array, then call renderStats
+    form.reset();
+    e.preventDefault();
+    
 });
 
 remove.addEventListener('click', () => {
