@@ -28,10 +28,10 @@ function renderStats() {
     }
 }
 
-function resetStats() {
-    stats = [];
-    statsList.textContent = '';
-}
+// function resetStats() {
+//     stats = [];
+//     statsList.textContent = '';
+//}
 
 form.addEventListener('submit', (e) => {
     const gameData = new FormData(form);
